@@ -3,13 +3,12 @@ import _thread
 import pickle
 from game import *
 import bz2
-import os
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-server = os.getenv('SERVER_IP')
+server = "IP ADDRESS HERE"
 port = 5555
-
+print(server)
 try:
     s.bind((server, port))
 except socket.error as e:

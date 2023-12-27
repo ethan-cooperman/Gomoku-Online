@@ -1,7 +1,6 @@
 import socket
 import pickle
 import bz2
-import os
 
 
 class Network:
@@ -9,7 +8,7 @@ class Network:
         """constructor for the network class
         """
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server = os.getenv('SERVER_IP')
+        self.server = "IP ADDRESS HERE"
         self.port = 5555
         self.addr = (self.server, self.port)
         self.p = self.connect()
